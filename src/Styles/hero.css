@@ -1,0 +1,160 @@
+/* --- CAMBIO 1: Convertir en Grid --- */
+.hero-section {
+  padding-top: 140px; 
+  padding-bottom: 70px;
+  
+  /* Definimos el grid de 2 columnas */
+  display: grid;
+  /* La columna de texto será 1.5 veces más ancha que la de skills */
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center; /* Centra el contenido verticalmente */
+  gap: 3rem; /* Espacio entre columnas */
+}
+
+.hero-intro {
+  color: var(--color-texto-titulo); /* <-- CAMBIA ESTO (de primario a texto-titulo) */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.hero-name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(90deg, 
+    var(--gradient-start), 
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: var(--color-texto-titulo);
+  margin-top: 0.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  margin-top: 1.5rem;
+  max-width: 650px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, 
+    var(--gradient-start), 
+    var(--gradient-end)
+  );
+  color: white;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-texto-titulo);
+  border-color: var(--color-borde);
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Título para las redes sociales --- */
+.socials-title {
+  font-size: 1.25rem; 
+  font-weight: 600;
+  color: var(--color-texto);
+  margin-top: 2.5rem; 
+  margin-bottom: 1rem; 
+}
+
+/* --- Iconos Sociales --- */
+.hero-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero-socials a {
+  color: var(--color-texto);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.hero-socials a:hover {
+  color: var(--color-primario);
+  transform: scale(1.1);
+}
+
+
+/* --- CAMBIO 3: Añadimos los estilos de la Columna 2 --- */
+
+.hero-skills-container {
+  background-color: var(--color-fondo-tarjeta);
+  border: 1px solid var(--color-borde);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.skills-title {
+  color: var(--color-texto-titulo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grid de 2 columnas para las skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Cada "Globito" de Habilidad */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Espacio entre logo y texto */
+  background-color: var(--color-fondo); /* Fondo más oscuro */
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: #2a3038; /* Un poco más claro al pasar el ratón */
+}
+
+.skill-item i {
+  font-size: 1.5rem; /* Tamaño del logo */
+  color: var(--color-primario);
+}
+
+.skill-item span {
+  font-size: 0.9rem; /* Tamaño del texto */
+  font-weight: 600;
+  color: var(--color-texto-titulo);
+}

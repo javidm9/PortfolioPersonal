@@ -1,0 +1,29 @@
+.contact-section {
+  padding-top: 70px; /* <-- CAMBIA ESTO (de 100px a 70px) */
+  padding-bottom: 70px; /* <-- CAMBIA ESTO (de 120px a 70px) */
+  text-align: center;
+  
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-title {
+  font-size: 2.5rem;
+  color: var(--color-texto-titulo);
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Reutilizamos la clase 'btn-primary' de hero.css, 
+   pero la centramos y hacemos más grande */
+.contact-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+}
