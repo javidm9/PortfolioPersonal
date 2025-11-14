@@ -1,0 +1,92 @@
+.navbar {
+  width: 100%;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(13, 17, 23, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-texto-titulo);
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem; /* Espacio entre enlaces */
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: var(--color-texto-titulo);
+}
+
+.nav-button {
+  padding: 0.5rem 1.5rem;
+  
+  /* --- ESTO ES LO QUE CAMBIA --- */
+  /* Aplicamos el gradiente (usando las variables que ya definiste) */
+  background:  
+    var(--gradient-end);
+  /* Aseguramos que el texto sea blanco para que contraste */
+  color: var(--color-texto-titulo); 
+  /* --- FIN DEL CAMBIO --- */
+
+  border: none;
+  border-radius: 999px; /* Botón-píldora */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  opacity: 0.8;
+}
+
+/* --- Estilos para el botón de idioma --- */
+
+/* Contenedor para alinear botón de contacto y de idioma */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.lang-toggle:hover {
+  background-color: var(--color-fondo-tarjeta);
+  color: var(--color-texto-titulo);
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-fondo: #0D1117;       
+  --color-texto: #C9D1D9;       
+  --color-texto-titulo: #FFFFFF; 
+  --color-primario: var(--gradient-start);  
+  --color-borde: rgba(255, 255, 255, 0.1);  
+  --color-fondo-tarjeta: #161B22; 
+  --color-acento-rgb: 125, 16, 89;
+  --gradient-start: #d873d8;  
+  --gradient-end: #2e153a;     
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-texto);
+  overflow-x: hidden; 
+  background-color: var(--color-fondo);
+  background-image: 
+    
+    radial-gradient(
+      circle at 30% 20%, 
+      rgba(var(--color-acento-rgb), 0.2) 0%, /* <-- MÁS FUERTE */
+      transparent 35% 
+    ),
+    /* Capa 2: Iluminación (Spotlight derecho) */
+    radial-gradient(
+      circle at 80% 30%, 
+      rgba(var(--color-acento-rgb), 0.15) 0%, /* <-- MÁS FUERTE */
+      transparent 30%
+    ),
+    /* Capa 3: Patrón de puntos */
+    radial-gradient(
+      circle at 1px 1px, 
+      rgba(255, 255, 255, 0.05) 1px, 
+      transparent 0
+    );
+
+  /* 3. Tamaño y Repetición de cada capa */
+  background-size: 
+    100% 100%,  /* Tamaño de la iluminación 1 */
+    100% 100%,  /* Tamaño de la iluminación 2 */
+    10px 10px;  /* Tamaño del patrón (un punto cada 10px) */
+  
+  background-repeat: 
+    no-repeat,  /* No repetir la iluminación */
+    no-repeat,
+    repeat;     /* Repetir el patrón de puntos */
+}
