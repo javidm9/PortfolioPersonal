@@ -3,16 +3,14 @@
   padding-top: 140px; 
   padding-bottom: 70px;
   
-  /* Definimos el grid de 2 columnas */
   display: grid;
-  /* La columna de texto será 1.5 veces más ancha que la de skills */
   grid-template-columns: 1.5fr 1fr;
-  align-items: center; /* Centra el contenido verticalmente */
-  gap: 3rem; /* Espacio entre columnas */
+  align-items: center; 
+  gap: 3rem; 
 }
 
 .hero-intro {
-  color: var(--color-texto-titulo); /* <-- CAMBIA ESTO (de primario a texto-titulo) */
+  color: var(--color-texto-titulo); 
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -82,7 +80,6 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- Título para las redes sociales --- */
 .socials-title {
   font-size: 1.25rem; 
   font-weight: 600;
@@ -91,7 +88,6 @@
   margin-bottom: 1rem; 
 }
 
-/* --- Iconos Sociales --- */
 .hero-socials {
   display: flex;
   gap: 1.5rem;
@@ -106,9 +102,6 @@
   color: var(--color-primario);
   transform: scale(1.1);
 }
-
-
-/* --- CAMBIO 3: Añadimos los estilos de la Columna 2 --- */
 
 .hero-skills-container {
   background-color: var(--color-fondo-tarjeta);
@@ -126,35 +119,33 @@
   text-align: center;
 }
 
-/* Grid de 2 columnas para las skills */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-/* Cada "Globito" de Habilidad */
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* Espacio entre logo y texto */
-  background-color: var(--color-fondo); /* Fondo más oscuro */
+  gap: 0.75rem; 
+  background-color: var(--color-fondo); 
   padding: 0.75rem 1rem;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .skill-item:hover {
-  background-color: #2a3038; /* Un poco más claro al pasar el ratón */
+  background-color: #2a3038; 
 }
 
 .skill-item i {
-  font-size: 1.5rem; /* Tamaño del logo */
+  font-size: 1.5rem;
   color: var(--color-primario);
 }
 
 .skill-item span {
-  font-size: 0.9rem; /* Tamaño del texto */
+  font-size: 0.9rem; 
   font-weight: 600;
   color: var(--color-texto-titulo);
 }
