@@ -1,0 +1,69 @@
+/* Importamos la fuente 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  /* Paleta de Colores "Dark Mode" */
+  --color-fondo: #0D1117;       /* Azul oscuro (como GitHub) */
+  --color-texto: #C9D1D9;       /* Gris claro para texto */
+  --color-texto-titulo: #FFFFFF; /* Blanco puro */
+  --color-primario: var(--gradient-start);  /* <-- Asegúrate de que sea este azul */
+  --color-borde: rgba(255, 255, 255, 0.1);  /* Azul de acento */
+  --color-fondo-tarjeta: #161B22; /* Fondo de tarjeta */ 
+  --color-acento-rgb: 35, 69, 25;
+  --gradient-start: #59b54c;  /* Rosa */
+  --gradient-end: #043e16;     
+}
+
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-texto);
+  overflow-x: hidden; 
+
+  /* --- NUEVO FONDO COMPLEJO --- */
+  
+  /* 1. Color de fondo sólido (por si algo falla) */
+  background-color: var(--color-fondo);
+
+  /* 2. Capas de fondo (de arriba a abajo) */
+  background-image: 
+    /* Capa 1: Iluminación (Spotlight superior, detrás del texto) */
+    radial-gradient(
+      circle at 30% 20%, 
+      rgba(var(--color-acento-rgb), 0.2) 0%, /* <-- MÁS FUERTE */
+      transparent 35% 
+    ),
+    /* Capa 2: Iluminación (Spotlight derecho) */
+    radial-gradient(
+      circle at 80% 30%, 
+      rgba(var(--color-acento-rgb), 0.15) 0%, /* <-- MÁS FUERTE */
+      transparent 30%
+    ),
+    /* Capa 3: Patrón de puntos */
+    radial-gradient(
+      circle at 1px 1px, 
+      rgba(255, 255, 255, 0.05) 1px, 
+      transparent 0
+    );
+
+  /* 3. Tamaño y Repetición de cada capa */
+  background-size: 
+    100% 100%,  /* Tamaño de la iluminación 1 */
+    100% 100%,  /* Tamaño de la iluminación 2 */
+    10px 10px;  /* Tamaño del patrón (un punto cada 10px) */
+  
+  background-repeat: 
+    no-repeat,  /* No repetir la iluminación */
+    no-repeat,
+    repeat;     /* Repetir el patrón de puntos */
+}

@@ -1,0 +1,131 @@
+.about-section {
+  padding-top: 70px; /* <-- CAMBIA ESTO (de 100px a 70px) */
+  padding-bottom: 70px; /* <-- CAMBIA ESTO (de 100px a 70px) */
+}
+
+/* --- Layout de 2 Columnas (CSS Grid) --- */
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+/* --- Columna Izquierda (Texto) --- */
+.about-text h2 {
+  font-size: 2.5rem;
+  color: var(--color-texto-titulo);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.about-text h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-texto);
+  margin-bottom: 1.5rem;
+}
+
+.about-text p strong {
+  color: var(--color-texto-titulo);
+}
+
+/* --- Columna Derecha (Timeline) --- */
+.timeline-title {
+  font-size: 1.5rem;
+  color: var(--color-texto-titulo);
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  border-left: 2px solid var(--color-borde);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Círculo en la línea de la timeline */
+/* Círculo en la línea de la timeline */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -8px; /* Centra el círculo en la línea */
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+
+  /* --- CAMBIA ESTA LÍNEA --- */
+  background-color: var(
+    --gradient-start
+  ); /* O var(--gradient-end), o un color fijo como #FFD700 (oro) */
+}
+.timeline-item h4 {
+  font-size: 1.1rem;
+  color: var(--color-texto-titulo);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item p {
+  color: var(--color-texto);
+  font-size: 0.9rem;
+}
+/* --- ESTILOS PARA IDIOMAS --- */
+
+.about-extras {
+  /* 1. Quitamos el espacio de arriba */
+  /* (Usamos un margen negativo para "comerse" el padding 
+     del último item de Formación) */
+  margin-top: -0.5rem; 
+
+  /* 2. Añadimos el hueco por abajo */
+  margin-bottom: 3rem; 
+}
+
+.extras-title {
+  font-size: 1.5rem;
+  color: var(--color-texto-titulo);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.extras-title i {
+  color: var(--color-primario);
+  font-size: 1.2rem;
+}
+
+.extras-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.extras-list li {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.extras-list li strong {
+  color: var(--color-texto-titulo);
+}
