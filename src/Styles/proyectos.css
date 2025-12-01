@@ -1,0 +1,116 @@
+.projects-section {
+  padding-top: 70px; /* <-- CAMBIA ESTO (de 100px a 70px) */
+  padding-bottom: 70px; /* <-- CAMBIA ESTO (de 100px a 70px) */
+}
+.projects-title {
+  font-size: 2.5rem;
+  color: var(--color-texto-titulo);
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.projects-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--gradient-start), 
+    var(--gradient-end)
+  );
+}
+
+/* --- CSS GRID para las tarjetas --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; 
+}
+
+/* --- Estilo de la Tarjeta --- */
+.project-card {
+  background-color: var(--color-fondo-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  overflow: hidden; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: var(--color-texto-titulo);
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: var(--color-texto);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  min-height: 60px; /* Ajusta esto según sea necesario */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* <-- AÑADE ESTA LÍNEA (la propiedad estándar) */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+/* Reemplaza la regla .card-tech que tenías */
+.card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Damos más espacio a los logos */
+  margin-bottom: 1.5rem;
+}
+
+/* Reemplaza la regla .card-tech span que tenías */
+.card-tech i {
+  font-size: 2rem; /* Hacemos los logos más grandes */
+  color: var(--color-texto); /* Color gris claro por defecto */
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover opcional: se colorean */
+.card-tech i:hover {
+  color: var(--color-primario);
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-link:hover {
+  color: var(--color-primario);
+}

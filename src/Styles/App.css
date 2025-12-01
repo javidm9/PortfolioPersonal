@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Este 'main-container' es clave:
+  Centra el contenido y le da un ancho máximo para que 
+  no se estire hasta el infinito en pantallas gigantes.
+*/
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto; /* El truco para centrar */
+  padding: 0 2rem; /* Espacio en los lados */
+  flex: 1; /* Empuja el footer hacia abajo */
+}
